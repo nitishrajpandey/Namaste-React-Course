@@ -1,0 +1,14 @@
+{
+  "name": "part-1",
+  "version": "1.0.0",
+  "description": "this is package initilize learning",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Nitish raj",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
