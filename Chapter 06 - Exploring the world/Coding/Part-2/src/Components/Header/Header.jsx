@@ -21,7 +21,7 @@ function Header() {
             className="text-black px-3 py-2 bg-blue-600 rounded-xl"
             onClick={handelOnClick}
           >
-            Login
+            {buttonValue}
           </button>
         </ul>
       </div>
