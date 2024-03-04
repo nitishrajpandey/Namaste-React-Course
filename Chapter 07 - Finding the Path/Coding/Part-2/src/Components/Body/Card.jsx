@@ -1,0 +1,36 @@
+import React from "react";
+import { CDN_URL } from "../../utils/constants";
+
+function Card({ restaurantList }) {
+  console.log(restaurantList);
+  return (
+    <>
+      <div className="flex justify-between flex-wrap gap-10 px-5 text-black ">
+        {restaurantList.map((item) => (
+          <div
+            key={item.info.id}
+            className="w-[300px] bg-[#F0F0F0] shadow-md shadow-gray-500 rounded-xl"
+          >
+            <div className="rounded-xl">
+              <img
+                className="rounded-t-xl"
+                src={CDN_URL + item.info.cloudinaryImageId}
+                alt=""
+              />
+            </div>
+            <div className="flex  flex-col gap-3 px-3 ">
+              <h1 className="font-bold mt-3 text-lg">{item.info.name}</h1>
+              <p>{item.info.cuisines.join(", ")}</p>
+
+              <p className="font-semibold">{item.info.avgRating} Stars</p>
+              <h3>{" rupees " + item.info.costForTwo / 100 + " price"}</h3>
+              <p>{item.info.slaString}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default Card;
