@@ -1,0 +1,24 @@
+/* eslint-disable react/prop-types */
+// import React from 'react'
+
+function Item({ item, index, foodItems, handelOnClickBuyButton }) {
+  return (
+    <>
+      <li
+        className={`border-b border-[gray] py-3 px-5 ${
+          index === foodItems.length - 1 ? "px-5 py-3 border-none" : ""
+        } flex justify-between items-center `}
+      >
+        {item}
+        <button
+          className="px-5 py-2   rounded-md active:scale-95 duration-300 ease-in-out  card-border-color-shadow"
+          onClick={handelOnClickBuyButton}
+        >
+          Buy
+        </button>
+      </li>
+    </>
+  );
+}
+
+export default Item;
