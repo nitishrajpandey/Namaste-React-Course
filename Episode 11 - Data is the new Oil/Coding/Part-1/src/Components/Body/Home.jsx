@@ -1,7 +1,7 @@
 // Home.js
 import React, { useState } from "react";
 import useFetchApi from "../../Utils/useFetchApi";
-import Card from "./Card";
+import Cards from "./Cards";
 import ShemmerForHome from "../Shemmer/ShemmerForHome";
 import useFilterData from "../../Utils/useFilterData";
 import useOnlineStatus from "../../Utils/useOnlineStatus";
@@ -66,8 +66,8 @@ function Home() {
         </div>
       </div>
 
-      <div>
-        <Card fetchData={filteredData} />
+      <div className="">
+        <Cards fetchData={filteredData} />
       </div>
     </div>
   );
